@@ -42,7 +42,7 @@ class Method2 {
 
 // bisa juga kalau multiparameter
 class Method3 {
-    static void myMethod(String nama, int umur) {
+    static void myMethod(String nama, int umur) { 
         System.out.println("nama aku adalah " + nama + " umur aku " + umur + " Tahun");
     }
     public static void main(String[] args) {
@@ -181,7 +181,8 @@ class Nenek1 { // terjadi 2 loop berbeda
 class Ngawur1 {
     int x = 6; // *class variable
     public static void main(String[] args) {
-        Main myObj = new Main();
+        Ngawur1 myObj = new Ngawur1(); // * buat objek dari kelas Ngawur1
         System.out.println(myObj.x);
     }
 }
+
