@@ -59,7 +59,7 @@ class CountDown {
 // * contoh menghitung factoial
 class Factorial {
     static int factorial(int x) {
-        if (x >= 2) {
+        if (x >= 1) {
             return x * factorial(x - 1);
         } else {
             return 1; // * maksutnya adalah faktorialnya berhenti sampai perkalian ke 1
