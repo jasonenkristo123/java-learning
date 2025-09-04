@@ -7,18 +7,35 @@
 
 // * contohnya yaitu class itu fruit objectnya ada apple, orange, mango
 // * So, a class is a template for objects, and an object is an instance of a class.
-// *When the individual objects are created, they inherit all the variables and methods from the class.
+// * When the individual objects are created, they inherit all the variables and methods from the class.
 
 public class OOPclass { // * terdapat class yaitu OOPclass
     int x = 5;
 }
 
 // * object itu di buat dari class dan menggunakan "new" contohnya
-class Main {
+class Object1 {
     int x = 5;
 
     public static void main(String[] args) {
-        Main myObj = new Main();
-        System.out.println(myObj.x); // * outpiut akan 5
+        Object1 myObj = new Object1();
+        System.out.println(myObj.x); // * output akan 5
     }
 }
+
+// multiple objects 
+class ObjectMulti {
+    int x;
+
+    ObjectMulti(int value) {
+        x = value;
+    }
+
+    public static void main(String[] args) {
+        ObjectMulti myObj1 = new ObjectMulti(10);
+        ObjectMulti myObj2 = new ObjectMulti(100);
+        System.out.println(myObj1.x);
+        System.out.println(myObj2.x);
+    }
+}
+
