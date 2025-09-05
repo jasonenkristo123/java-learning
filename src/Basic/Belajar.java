@@ -122,7 +122,7 @@ class Typecastingexample {
     public static void main(String[] args) {
         int maxScore = 1000;
         int nilaiUser = 543; // nilai user yang didapatkan
-        float persentase = (float) nilaiUser / maxScore * 100; // typecasting dari int ke float
+        double persentase = (double) nilaiUser / maxScore * 100; // typecasting dari int ke float
         System.out.println("Persentase nilai user adalah: " + persentase + "%"); // sehingga hasilnya adalah float dari int
     }
 }
@@ -333,7 +333,7 @@ class ifelse2 {
 // shorthand if else statement dimana kita menggunakan tanda tanya (?) dan titik dua (:) untuk menyingkat if else statement
 class shorthand {
     public static void main(String[] args) {
-        int x = 10;
+        int x = 20;
         String result = (x > 5) ? "x lebih besar dari 5" : "x lebih kecil dari 5"; // : digunakan seperti else
         System.out.println(result); // output akan x lebih besar dari 5 karena x 10 lebih besar dari 5
     }
