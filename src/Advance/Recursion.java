@@ -4,7 +4,6 @@ package Advance;
 // *Adding two numbers together is easy to do, but adding a range of numbers is more complicated. In the following example, 
 // *recursion is used to add a range of numbers together by breaking it down into the simple task of adding two numbers:
 public class Recursion {
-
     // Membuat method static bernama sum yang menerima parameter integer k
     public static int sum(int k) {
         // Kondisi rekursif: jika k lebih besar dari 0
@@ -21,7 +20,6 @@ public class Recursion {
     public static void main(String[] args) {
         // Memanggil fungsi sum dengan nilai awal 0
         int result = sum(10); // *karena k=10 jadi sesuai return-> 10 + sum(9)..... jadi 10+9+8+7+6+5+4+3+2+1+0
-        // Menampilkan hasil ke console
         System.out.println(result);
     }
 }
@@ -47,18 +45,18 @@ class Halting1 {
 // * countdown di recursion
 class CountDown {
     static void countdown(int n) { // * void digunakan ketika hanya ingin melakukan perintah di console bukan mengembalikan angka
-        if (n >= 0) {
-            System.out.println(n + " ");
+        if (n > 0) {
+            System.out.println(n);
             countdown(n - 1); // * langsung (n - 1) karena nilai n tetap dan tidak diubah 
         }
     }
     public static void main(String[] args) {
-        countdown (10);
+        countdown(10);
     }
 }
 
 // * contoh menghitung factoial
-class Factorial {
+ class Factorial {
     static int factorial(int x) {
         if (x >= 1) {
             return x * factorial(x - 1);
@@ -67,6 +65,6 @@ class Factorial {
         }
     }
     public static void main(String[] args) {
-        System.out.println("faktorial dari 10 adalah: " + factorial(10));
+        System.out.println("faktorial dari 4 adalah: " + factorial(4));
     }
 }

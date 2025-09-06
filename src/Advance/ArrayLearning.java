@@ -118,7 +118,7 @@ class Annyeong {
         int[][] nomor = {{1, 3, 5, 7}, {10, 20, 30}};
         for (int[] row : nomor) { // maksutnya adalah int[] adalah baris di dalam nomor -> dia mewakili tiap baris yang akan di loop
             for (int i : row) { // ini maksutnya adalah i itu adalah angka di dalam barisnya dan nantinya akan di print sehingga sama saja akan di print semuanya
-                System.out.println(i);
+                System.out.println(i); // print semua angka di dalam baris
             }
         }
     }

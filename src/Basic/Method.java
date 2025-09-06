@@ -1,4 +1,14 @@
 package Basic;
+public class Method {
+    static void Gajelas() {
+        System.out.println("Aku ke execute");
+    }
+    public static void main(String[] args) {
+        Gajelas();
+        Gajelas(); 
+        Gajelas(); // sehingga ke print 3 kali karena myMethod menggantikan println
+    }
+}
 // belajar java method
 /*
 *A method is a block of code which only runs when it is called.
@@ -7,10 +17,6 @@ package Basic;
 *Why use methods? To reuse code: define the code once, and use it many times.
  */
 
-public class Method {
-    static void myMethod() {
-    }
-}
 /*
  * myMethod() is the name of the method
 * static means that the method belongs to the Main class and not an object of the Main class. You will learn more about objects and how to access methods through objects later in this tutorial.
@@ -19,16 +25,7 @@ public class Method {
 
 // contoh 
 
-class Method1 {
-    static void myMethod() {
-        System.out.println("Aku ke execute");
-    }
-    public static void main(String[] args) {
-        myMethod();
-        myMethod(); 
-        myMethod(); // sehingga ke print 3 kali karena myMethod menggantikan println
-    }
-}
+
 
 // Method Parameter adalah variable atau string di dalam method tersebut
 class Method2 {
@@ -95,7 +92,7 @@ class Method7 {
     static int myMethod(int x) {
         return x * 3;
     }
-    public static void main(String[] args) {
+    public static void main(String[c x] args) {
         for (int i = 1; i <= 4; i++) {
             System.out.println("jika dikalikan 3 dari " + i + " adalah = " + myMethod(i));
         }

@@ -11,7 +11,7 @@ package OOP;
 // * When the individual objects are created, they inherit all the variables and methods from the class.
 
 public class OOPclass { // * terdapat class yaitu OOPclass
-    int x = 5;
+   
 }
 
 // * object itu di buat dari class dan menggunakan "new" contohnya
