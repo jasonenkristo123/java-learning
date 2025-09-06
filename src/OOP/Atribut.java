@@ -34,3 +34,4 @@ class Object3 {
         System.out.println("nama panjang saya adalah " + myObj.firstName + " " + myObj.secondName + ", saya umur " + myObj.umur);
     }
 }
+
