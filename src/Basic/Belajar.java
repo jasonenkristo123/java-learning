@@ -467,11 +467,26 @@ class MultiplicationTable {
 // bikin star pattern dengan nested loop
 class ContohStar {
     public static void main(String[] args) {
-        for (int i = 1; i <= 5; i++) {
+        for (int i = 5; i >= 1; i--) {
             for (int j = 1; j <= i; j++) {
                 System.out.print("*"); // print bintang tanpa newline
             }
             System.out.println(); // print newline setelah inner loop selesai
+        }
+    }
+}
+
+class Pyramid {
+    public static void main(String[] args) {
+        int n = 5;
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n - 1; j++) {
+                System.out.print(" ");
+            }
+            for (int k = 1; k <= 2 * i - 1; k++) {
+                System.out.print("*");
+            }
+            System.out.println();
         }
     }
 }
@@ -503,7 +518,7 @@ class Eek {
             if (i == 2) {
                 continue; // continue digunakan untuk melewati iterasi tertentu
             }
-            if (i == 4) {
+            if (i == 5) {
                 break; // break digunakan untuk menghentikan loop
             }
             System.out.println(i);

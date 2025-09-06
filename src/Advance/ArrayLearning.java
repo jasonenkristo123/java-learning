@@ -2,14 +2,14 @@ package Advance;
 public class ArrayLearning {
     public static void main(String[] args) {
         String[] names = {"Aldo", "Babi", "Bobo", "Astaga"};
-        System.out.println(names[2]);
+        System.out.println(names[2]); // output akan bobo
     }
 }
 
 // loop through array 
 class LoopArray {
     public static void main(String[] args) {
-        String[] names = {"baba", "bibi", "bubu", "bobo"};
+        String[] names = {"baba", "bibi", "bubu", "bobo"}; // length nya 0,1,2,3
         for (int i = 2; i < names.length; i++) { // output akan bubu bobo karrena dimulai dari index 2 yaitu i nya, setiap nama di itung dari 0
             System.out.println(names[i]);
         }
@@ -30,7 +30,7 @@ class LoopArrayForEach {
 
 class AverageAge {
     public static void main(String[] args) {
-        int ages[] = {20, 22, 24, 26, 28, 30, 35, 40};
+        int ages[] = {20, 22, 24, 26, 28, 30, 35, 40}; // length = 7
         float avg, sum = 0; // inisialisasi variabel avg dan sum
 
         // get the length of the array
@@ -58,8 +58,8 @@ class ArrayLoopLearn {
     int length = ages.length; // membuat variable length yang adalah panjang dari variable umur yang sudah kita buat
 
     // Loop through the elements of the array
-    for (int i = 0; i < ages.length; i++) { // looping variable age adalah nilai di array tersebut
-      sum += ages[i]; // sum = sum + age tersebut
+    for (int age : ages) { // looping variable age adalah nilai di array tersebut
+      sum += age; // sum = sum + age tersebut
     }
     
     // Calculate the average by dividing the sum by the length
@@ -80,12 +80,12 @@ class Taek {
 
         int lowestAge = ages[0];
 
-        for (int i = 0; i < ages.length; i++) {
-            if (lowestAge > ages[i]){
+        for (int i = 0; i < ages.length; i++) { // looping dari awal elemen sampai akhir
+            if (lowestAge > ages[i]) { // jika nilai pembanding awal yaitu elemen ke 0 lbih besar dari di array, update lowestage jadi angka yang lebih kecil
             lowestAge = ages[i];
+                System.out.println("umur terendahnya adalah " + lowestAge);
             }                
-        }
-            System.out.println("umur terendahnya adalah " + lowestAge);
+        }  
     }
 }
 
