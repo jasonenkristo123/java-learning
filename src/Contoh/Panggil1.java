@@ -5,5 +5,7 @@ class Panggil1 {
         Class1 Obj = new Class1();
         Obj.mesin();
         Obj.kenceng(399);
+        Obj.ban();
+        Obj.setir();
     }
 }

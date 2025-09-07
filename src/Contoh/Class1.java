@@ -7,4 +7,10 @@ public class Class1 {
     public void kenceng(int maxKecepatan) {
         System.out.println("kecepatan mobil ini adalah: " + maxKecepatan + "kilo per jam");
     }
+    public void ban() {
+        System.out.println("ban nya bocor bos");
+    }
+    public void setir() {
+        System.out.println("Setirnya juga rusak");
+    }
 }
