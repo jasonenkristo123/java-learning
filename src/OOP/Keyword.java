@@ -19,3 +19,31 @@ public class Keyword {
         System.out.println(Obj.x * Obj.y);
     }
 }
+
+// memanggil constructor dari constructor lain
+// You can also use this() to call another constructor in the same class.
+// This is useful when you want to provide default values or reuse initialization code instead of repeating it.
+
+class thisLearn {
+    int tahunModel;
+    String namaMotor;
+
+    public thisLearn(String namaMotor) {
+        this(2020, namaMotor);
+    }
+    public thisLearn(int tahunModel, String namaMotor){
+        this.tahunModel = tahunModel;
+        this.namaMotor = namaMotor;
+    }
+
+    public void printInfo() {
+        System.out.println(tahunModel + " " + namaMotor);
+    }
+    public static void main(String[] args) {
+        thisLearn Obj1 = new thisLearn("CBR");
+        thisLearn Obj2 = new thisLearn(2025, "Ninja");
+
+        Obj1.printInfo();
+        Obj2.printInfo();
+    }
+}
