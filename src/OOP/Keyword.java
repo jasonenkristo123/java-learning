@@ -27,23 +27,29 @@ public class Keyword {
 class thisLearn {
     int tahunModel;
     String namaMotor;
-
+    // constructor dengan 1 parameter
     public thisLearn(String namaMotor) {
         this(2020, namaMotor);
     }
+    // constructor dengan 2 parameter
     public thisLearn(int tahunModel, String namaMotor){
         this.tahunModel = tahunModel;
         this.namaMotor = namaMotor;
     }
-
+    // method buat print
     public void printInfo() {
         System.out.println(tahunModel + " " + namaMotor);
     }
     public static void main(String[] args) {
-        thisLearn Obj1 = new thisLearn("CBR");
-        thisLearn Obj2 = new thisLearn(2025, "Ninja");
+        thisLearn Obj1 = new thisLearn("CBR"); // ini cuma beri nama karena tahun model di atas sudah di tentukan
+        thisLearn Obj2 = new thisLearn(2025, "Ninja"); // ini memasukan 2 value soalnya belum ada value di atas
 
-        Obj1.printInfo();
-        Obj2.printInfo();
+        Obj1.printInfo(); // print obj 1
+        Obj2.printInfo(); // print obj 2
     }
 }
+
+// The call to this() must be the first statement inside the constructor.
+// kapan harus menggunakan ini?
+// When a constructor or method has a parameter with the same name as a class variable, use this to update the class variable correctly.
+// To call another constructor in the same class and reuse code.
