@@ -47,4 +47,4 @@ class Main extends Vehicle {
     myFastCar.honk();
     System.out.println(myFastCar.brand + " " + myFastCar.modelName);
   }
-}
+} // akan terjadi eror karena sudah ada final class 
