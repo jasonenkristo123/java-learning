@@ -57,4 +57,25 @@ class printInfo4 {
         outerClass2.innerClass2 myInner = new outerClass2.innerClass2();
         System.out.println(myInner.y);
     }
+} // Note: just like static attributes and methods, a static inner class does not have access to members of the outer class.
+
+// One advantage of inner classes, is that they can access attributes and methods of the outer class:
+
+class outerClass3 {
+    int x = 100;
+    int y = 5;
+
+    class innerClass3{
+        public int myInnerMethod() {
+            return x / y;
+        }
+    }
+}
+
+class printInfo5 {
+    public static void main(String[] args) {
+        outerClass3 Outer = new outerClass3();
+        outerClass3.innerClass3 Inner = Outer.new innerClass3();
+        System.out.println(Inner.myInnerMethod());
+    }
 }
