@@ -71,7 +71,7 @@ class Animal2 {
 }
 class doggy extends Animal2 {
     doggy() {
-        super();
+        super(); // call parent constructor
         System.out.println("Doggy is coming");
     }
 }
