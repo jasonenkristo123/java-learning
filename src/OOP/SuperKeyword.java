@@ -50,8 +50,8 @@ class cat extends Animal1 {
     String type = "dawg"; // sub class/child
 
     public void printType() {
-        System.out.println(super.type); // acess parent attribute
-        System.out.println(this.type);
+        System.out.println(super.type); // acess parent attribute, karena super untuk parent class
+        System.out.println(this.type); // akan output dawg karena this kusus untuk child class
     }
 }
 
@@ -59,5 +59,24 @@ class keyword1 {
     public static void main(String[] args) {
         cat obj = new cat();
         obj.printType(); // akan manggil printType dan ke print Animal
+    }
+}
+
+// call parent constructor
+// Use super() to call the constructor of the parent class. This is especially useful for reusing initialization code.
+class Animal2 {
+    Animal2() {
+        System.out.println("Animal is created");
+    }
+}
+class doggy extends Animal2 {
+    doggy() {
+        super();
+        System.out.println("Doggy is coming");
+    }
+}
+class printInfo1 {
+    public static void main(String[] args) {
+        doggy obj = new doggy();
     }
 }
