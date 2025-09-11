@@ -39,3 +39,25 @@ class printInfo {
         objdog.animalSound();
     }
 }
+
+// You can also use super to access an attribute from the parent class if they have an attribute with the same name:
+
+class Animal1 {
+    String type = "Animal"; // parent attribute
+}
+
+class cat extends Animal1 {
+    String type = "dawg"; // sub class/child
+
+    public void printType() {
+        System.out.println(super.type); // acess parent attribute
+        System.out.println(this.type);
+    }
+}
+
+class keyword1 {
+    public static void main(String[] args) {
+        cat obj = new cat();
+        obj.printType(); // akan manggil printType dan ke print Animal
+    }
+}
