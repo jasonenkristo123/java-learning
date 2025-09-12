@@ -74,8 +74,8 @@ class outerClass3 {
 
 class printInfo5 {
     public static void main(String[] args) {
-        outerClass3 Outer = new outerClass3();
-        outerClass3.innerClass3 Inner = Outer.new innerClass3();
-        System.out.println(Inner.myInnerMethod());
+        outerClass3 Outer = new outerClass3(); // buat objek outer
+        outerClass3.innerClass3 Inner = Outer.new innerClass3(); // buat objek inner
+        System.out.println(Inner.myInnerMethod()); // print return method di atas
     }
 }
