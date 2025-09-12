@@ -38,3 +38,5 @@ class printInfo6 {
     obj.sleep();
     }
 }
+// Why And When To Use Abstract Classes and Methods?
+// To achieve security - hide certain details and only show the important details of an object.
