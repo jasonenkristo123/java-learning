@@ -41,3 +41,9 @@ class ngengok {
         greet.sayHello();
     }
 }
+
+// When to Use Anonymous Classes?
+// Use anonymous classes when you need to create a short class for one-time use. For example:
+// Overriding a method without creating a new subclass
+// Implementing an interface quickly
+// Passing small pieces of behavior as objects
