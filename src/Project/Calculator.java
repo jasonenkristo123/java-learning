@@ -1,38 +1,33 @@
 package Project;
 
 // project sederhana calculatorr cli
-import java.util.Scanner;
 public class Calculator {
-    public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        System.out.println("masukkan angka pertama: ");
-        int angka1 = Integer.parseInt(input.nextLine());
-        System.out.println("masukkan angka kedua: ");
-        int angka2 = Integer.parseInt(input.nextLine());
-        System.out.println("Pilih Operator (+, -, x, /, %): ");
-        String operator = input.nextLine();
+    public double calculate(double a, double b, String Operator) { // membuat method bernama calculate
+        double hasil = 0; // hasil awal dari 0
 
-        int hasil = 0;
-
-        switch (operator) {
+        switch(Operator) {
             case "+":
-                hasil = angka1 + angka2;
+                hasil = a + b;
             break;
             case "-":
-                hasil = angka1 - angka2;
+                hasil = a - b;
             break;
-            case "x":
-                hasil = angka1 * angka2;
+            case "*":
+                hasil = a * b;
             break;
             case "/":
-                hasil = angka1 / angka2;
+                if (b == 0) {
+                    throw new ArithmeticException("error : divided by zero"); // menandakan kesalahan di operasi aritmatika, menghentikan program
+                }
+                hasil = a / b;
             break;
             case "%":
-                hasil = angka1 % angka2;
+                hasil = a % b;
             break;
             default:
-                System.out.println("input invalid");
+                throw new IllegalArgumentException(Operator + "operator tidak dikenali"); // untuk input yang tidak valid di hentikan 
         }
-        System.out.println("hasilnya adalah: " + hasil);
+        return hasil;
     }
 }
+    
