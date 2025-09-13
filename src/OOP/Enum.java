@@ -78,3 +78,47 @@ class nama1 {
         }
     }
 }
+
+/*
+*Difference between Enums and Classes
+*An enum can, just like a class, have attributes and methods. 
+*The only difference is that enum constants are public, static and final (unchangeable - cannot be overridden).
+*An enum cannot be used to create objects, and it cannot extend other classes (but it can implement interfaces).
+* Why And When To Use Enums?
+Use enums when you have values that you know aren't going to change, like month days, days, colors, deck of cards, etc.
+ */
+
+ // enum constructor
+/*
+ * An enum can also have a constructor just like a class.
+* The constructor is called automatically when the constants are created. You cannot call it yourself.
+* Here, each constant in the enum has a value (a string) that is set through the constructor:
+ */
+
+enum levels {
+    // * enum constants ada deskripsi sendiri 
+    LOW("guampang"),
+    MEDIUM("lumayan susah"),
+    HARD("Susah loh ini");
+
+    private String description; // * // Field (variable) to store the description text
+
+    private levels(String description){ //* Constructor (runs once for each constant above)
+        this.description = description;
+    }
+    // * Getter method to read the description
+    public String getDescription() {
+        return description;
+    }
+}
+
+class printInfo9 {
+    public static void main(String[] args) {
+        levels obj = levels.HARD; //* pick one enum constant
+        System.out.println(obj.getDescription());
+        // * kalau mau di loop
+        for (levels objLevels : levels.values()) {
+            System.out.println(objLevels + ":" + objLevels.getDescription());
+        }
+    }
+}
