@@ -1,10 +1,14 @@
 package Project;
 
-import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.Scanner; // untuk fitur history
+
 public class CalculatorApp {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in); // membaca input
         Calculator calc = new Calculator(); // buat object dari class calculator
+
+        ArrayList<String> history = new ArrayList<>();
 
         while (true) { // looping agar user bisa pakai terus
             System.out.println("Masukkan perhitungan (10 + 5) atau exit: ");
@@ -13,7 +17,17 @@ public class CalculatorApp {
             if (line.equalsIgnoreCase("exit")) { // kalau exit, keluar loop
                 break;
             }
-
+            
+            if (line.equalsIgnoreCase("history")) {
+                if (history.isEmpty()) {
+                    System.out.println("belum ada history");
+                } else {
+                    System.out.println("History: ");
+                    for (String h : history)
+                    System.out.println(h);
+                }
+            }   
+        
             try { // -> bagian yang rawan eror 
                 // memecah input berdasarkan spasi
 
@@ -29,8 +43,12 @@ public class CalculatorApp {
                 double hasil = calc.calculate(a, b, Operator); // hasilnya sesuai dengan perhitungan di file calculator
                 System.out.println("Hasilnya: " + hasil);
 
+                
+                String ekspresi = a + " " + Operator + " " + b + " = " + hasil;
+                history.add(ekspresi); // menambahkan ekspresi ke tabel history
+
             } catch (Exception e) { // kalau eror akan menampilkan pesan
-                System.out.println("Error: " + e.getMessage()); // 
+                System.out.println(e.getMessage()); // getmessage adalah mengampil pesan yang di file satunya
             }
         }
         System.out.println("program selesai");
