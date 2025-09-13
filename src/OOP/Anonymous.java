@@ -25,3 +25,19 @@ public class Anonymous {
         myAnimal.makeSound();
     }
 }
+
+// anonymous class from interface
+interface greeting {
+    void sayHello();
+}
+
+class ngengok {
+    public static void main(String[] args) {
+        greeting greet = new greeting() {
+            public void sayHello() {
+                System.out.println("hello world");
+            }
+        };
+        greet.sayHello();
+    }
+}
