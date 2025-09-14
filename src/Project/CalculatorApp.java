@@ -33,7 +33,26 @@ public class CalculatorApp {
                 System.out.println("history semua di clear");
                 continue;
             }
-        
+            
+            if (line.toLowerCase().startsWith("sqrt")) {
+                try {
+                    
+                String numberStr = line.substring(4).trim(); // mengambil angka setelah sqrt
+                double a = Double.parseDouble(numberStr);
+
+                if (a < 0) {
+                    System.out.println("tidak bisa angka negatif di akar");
+                } else {
+                    double hasil = Math.sqrt(a);
+                    history.add("akar dari" + a + " = " + hasil);
+                    System.out.println("hasil = " + hasil);
+                }
+            } catch (Exception e) {
+                System.out.println("error input akar");
+            }
+            continue;
+        }
+
             try { // -> bagian yang rawan eror 
                 // memecah input berdasarkan spasi
 

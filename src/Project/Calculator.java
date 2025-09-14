@@ -24,6 +24,9 @@ public class Calculator {
             case "%":
                 hasil = a % b;
             break;
+            case "^":
+                hasil = Math.pow(a, b);
+            break;
             default:
                 throw new IllegalArgumentException(Operator + "operator tidak dikenali"); // untuk input yang tidak valid di hentikan 
         }
