@@ -8,7 +8,7 @@ public class CalculatorApp {
         Scanner input = new Scanner(System.in); // membaca input
         Calculator calc = new Calculator(); // buat object dari class calculator
 
-        ArrayList<String> history = new ArrayList<>();
+        ArrayList<String> history = new ArrayList<>(); // membuat tabel array namanya history
 
         while (true) { // looping agar user bisa pakai terus
             System.out.println("Masukkan perhitungan (10 + 5) atau exit: ");
@@ -23,10 +23,16 @@ public class CalculatorApp {
                     System.out.println("belum ada history");
                 } else {
                     System.out.println("History: ");
-                    for (String h : history)
-                    System.out.println(h);
+                    for (String h : history) 
+                    System.out.println(h); // segala elemen yang ada di history di print
                 }
             }   
+
+            if (line.equalsIgnoreCase("clear")) {
+                history.clear();
+                System.out.println("history semua di clear");
+                continue;
+            }
         
             try { // -> bagian yang rawan eror 
                 // memecah input berdasarkan spasi
