@@ -1,11 +1,15 @@
 package Project;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.FileWriter; // untuk fitur history
 import java.util.ArrayList;
-import java.util.Scanner; // untuk fitur history
+import java.util.Scanner;
 
 public class CalculatorApp {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in); // membaca input
+        
         Calculator calc = new Calculator(); // buat object dari class calculator
 
         ArrayList<String> history = new ArrayList<>(); // membuat tabel array namanya history
@@ -33,6 +37,32 @@ public class CalculatorApp {
                     System.out.println(h); // segala elemen yang ada di history di print
                 }
             }   
+
+            if (line.equalsIgnoreCase("save")) {
+                try (FileWriter writer = new FileWriter("history.txt")) {
+                    for (String h : history) {
+                        writer.write(h + "\n");
+                    }
+                    System.out.println("history berhasil disimpan ke history.txt");
+                } catch (Exception e) {
+                    System.out.println("error saat menyimpan");
+                }
+                continue;
+            }
+
+            if (line.equalsIgnoreCase("load")) {
+                try (BufferedReader reader = new BufferedReader(new FileReader("history.txt"))) {
+                    String baris;
+                    history.clear();
+                    while ((baris = reader.readLine()) != null) {
+                        history.add(baris);
+                    }
+                    System.out.println("history berhasil dibaca di history.txt");
+                } catch (Exception e) {
+                    System.out.println("error saat membaca");
+                }
+                continue;
+            }
 
             if (line.equalsIgnoreCase("clear")) {
                 history.clear();

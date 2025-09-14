@@ -1,0 +1,19 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+        "type": "java",
+        "name": "CalculatorApp",
+        "request": "launch",
+        "mainClass": "Project.CalculatorApp",
+        "projectName": "java-learning_94fed51a"
+    },
+    {
+        "type": "java",
+        "name": "Run CalculatorApp",
+        "request": "launch",
+        "mainClass": "Project.CalculatorApp",
+        "projectName": "java-learning"
+    }
+]
+}
