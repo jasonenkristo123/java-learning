@@ -11,9 +11,15 @@ public class CalculatorApp {
         ArrayList<String> history = new ArrayList<>(); // membuat tabel array namanya history
 
         while (true) { // looping agar user bisa pakai terus
-            System.out.println("Masukkan perhitungan (10 + 5) atau exit: ");
+            System.out.println("Masukkan perhitungan misal (10 + 5), ketik help untuk lebih lanjut: ");
             String line = input.nextLine();
-            
+            if (line.equalsIgnoreCase("help")) {
+                System.out.println("Perintah yang tersedia");
+                System.out.println("- ketik \"exit\" untuk keluar");
+                System.out.println("- ketik \"history\" untuk melihat history");
+                System.out.println("- ketik \"clear\" untuk menghapus history");
+                System.out.println("- operasi aritmatika yang tersedia: +, -, *, /, %, sqrt");
+            }
             if (line.equalsIgnoreCase("exit")) { // kalau exit, keluar loop
                 break;
             }
@@ -36,7 +42,7 @@ public class CalculatorApp {
             
             if (line.toLowerCase().startsWith("sqrt")) {
                 try {
-                    
+                
                 String numberStr = line.substring(4).trim(); // mengambil angka setelah sqrt
                 double a = Double.parseDouble(numberStr);
 
@@ -44,7 +50,7 @@ public class CalculatorApp {
                     System.out.println("tidak bisa angka negatif di akar");
                 } else {
                     double hasil = Math.sqrt(a);
-                    history.add("akar dari" + a + " = " + hasil);
+                    history.add("akar dari " + a + " = " + hasil);
                     System.out.println("hasil = " + hasil);
                 }
             } catch (Exception e) {
@@ -60,7 +66,9 @@ public class CalculatorApp {
                 //split(" ") → memecah string berdasarkan spasi.
                 //Contoh: "10 + 5".split(" ") → hasil: ["10", "+", "5"].
 
-                String[] parts = line.trim().split(" "); // maksutnya adalah di pisah per angka misal "10", "+", "5"
+                String lineFormatted = line.replaceAll("([+\\-\\*/%^])", " $1 ");
+                String [] parts = lineFormatted.trim().split("\\s+"); // maksutnya 1 atau lebih spasi
+                // maksutnya adalah di pisah per angka misal "10", "+", "5"
                 double a = Double.parseDouble(parts[0]); // index 0 adalah angka 1
                 String Operator = parts[1]; // index 1 adalah operatorr
                 double b = Double.parseDouble(parts[2]); // index 2 adalah angka 2
