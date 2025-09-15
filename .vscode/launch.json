@@ -3,6 +3,13 @@
   "configurations": [
     {
         "type": "java",
+        "name": "ATesting",
+        "request": "launch",
+        "mainClass": "Project.ATesting",
+        "projectName": "java-learning_94fed51a"
+    },
+    {
+        "type": "java",
         "name": "CalculatorApp",
         "request": "launch",
         "mainClass": "Project.CalculatorApp",
