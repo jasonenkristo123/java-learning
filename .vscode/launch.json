@@ -3,6 +3,13 @@
   "configurations": [
     {
         "type": "java",
+        "name": "LibraryApp",
+        "request": "launch",
+        "mainClass": "Library.LibraryApp",
+        "projectName": "java-learning_94fed51a"
+    },
+    {
+        "type": "java",
         "name": "BookManagerTest",
         "request": "launch",
         "mainClass": "Projects.BookManagerTest",
