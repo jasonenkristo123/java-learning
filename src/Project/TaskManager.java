@@ -35,7 +35,7 @@ public class TaskManager {
         if (index < 1 || index > tasks.size()) {
             System.out.println("nomor tugas tidak valid");
             return;
-        }
+        }   
         tasks.get(index - 1).markCompleted();
         System.out.println("Tugas ke- " + index + " selesai");
     }

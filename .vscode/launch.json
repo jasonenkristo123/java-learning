@@ -3,6 +3,13 @@
   "configurations": [
     {
         "type": "java",
+        "name": "BookManagerTest",
+        "request": "launch",
+        "mainClass": "Projects.BookManagerTest",
+        "projectName": "java-learning_94fed51a"
+    },
+    {
+        "type": "java",
         "name": "TeskManagerTest",
         "request": "launch",
         "mainClass": "Project.TeskManagerTest",

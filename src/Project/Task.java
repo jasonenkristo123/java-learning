@@ -4,7 +4,7 @@ public class Task {
     private String description; // isi tugasnya
     private boolean completed; // udah selesai atau belum
 
-    public Task(String description) {
+    public Task(String description) { // untuk mengisi list tugasnya nanti
         if (description == null || description.isEmpty()) {
             throw new IllegalArgumentException("tugas belum ada");
         }
