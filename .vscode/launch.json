@@ -3,6 +3,13 @@
   "configurations": [
     {
         "type": "java",
+        "name": "vending",
+        "request": "launch",
+        "mainClass": "Project.vending",
+        "projectName": "java-learning_94fed51a"
+    },
+    {
+        "type": "java",
         "name": "Latian2",
         "request": "launch",
         "mainClass": "Playground.Latian2",
