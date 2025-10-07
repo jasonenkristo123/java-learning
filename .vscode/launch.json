@@ -3,6 +3,13 @@
   "configurations": [
     {
         "type": "java",
+        "name": "setres2",
+        "request": "launch",
+        "mainClass": "Playground.setres2",
+        "projectName": "java-learning_94fed51a"
+    },
+    {
+        "type": "java",
         "name": "setres1",
         "request": "launch",
         "mainClass": "Playground.setres1",

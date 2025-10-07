@@ -155,9 +155,47 @@ class setres1 {
                         break;
                     } else {
                         System.out.println("angka tidak ditemukan");
+                        break;
                     }
                 }
             }
         }
+    }
+}
+
+class setres2 {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+
+        System.out.print("Masukkan baris: ");
+        int baris = in.nextInt();
+
+        System.out.print("Masukkan kolom: ");
+        int kolom = in.nextInt();
+
+        int arr[][] = new int [baris][kolom];
+
+        for (int i = 0; i < baris; i++) {
+            for (int j = 0; j < kolom; j++) {
+                System.out.print("Masukkan angka ke [" + i + "][" + j + "]: "); 
+                arr[i][j] = in.nextInt();
+            }
+        }
+        System.out.println("Array saat ini: ");
+        for (int i = 0; i < baris; i++) {
+            for (int j = 0; j < kolom; j++) {
+                System.out.print(arr[i][j] + " ");
+            }
+            System.out.println();
+        }
+
+        // menambahkan semua array 
+        int sum = 0;
+        for (int i = 0; i < baris; i++) {
+            for (int j = 0; j < kolom; j++) {
+                sum += arr[i][j];
+            }
+        }
+        System.out.println("Jumlah dari semua array: " + sum);
     }
 }
