@@ -71,3 +71,93 @@ public class setres {
 
     }
 }
+
+class setres1 {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Masukkan jumlah array: ");
+        int jumlahArray = in.nextInt();
+
+        int arr[] = new int[jumlahArray];
+
+        for (int i = 0; i < jumlahArray; i++) {
+            System.out.print("Masukkan nilai ke-" + (i + 1) + ": ");
+            arr[i] = in.nextInt();
+        }
+        for (int i = 0; i < jumlahArray; i++) {
+            System.out.println("Array saat ini adalah = " + arr[i]);
+        }
+
+        int avg, sum = 0;
+        for (int i = 0; i < jumlahArray; i++) {
+            sum += arr[i];
+        }
+        avg = sum / jumlahArray;
+
+        int nmax = arr[0];
+        int nmin = arr[0];
+
+        for (int i = 0; i < jumlahArray; i++) {
+            if (arr[i] > nmax) {
+                nmax = arr[i];
+            } else if (arr[i] < nmin) {
+                nmin = arr[i];
+            }
+        }
+
+        // mencari berapa angka yang ganjil dan genap di array tersebut
+        int genap = 0;
+        int ganjil = 0;
+        for (int i = 0; i < jumlahArray; i++) {
+            if (arr[i] % 2 == 0) {
+                genap++;
+            } else if (arr[i] % 2 == 1) {
+                ganjil++;
+            }
+        }
+
+        // menampilkan array secara terbalik
+        
+        for (int i = jumlahArray - 1; i >= 0; i--) {
+            System.out.println(arr[i]);
+        }
+
+        // mengubah nilai negatif menjadi 0
+
+        for (int i = 0; i < jumlahArray; i++) {
+            if (arr[i] < 0) {
+                arr[i] = 0;
+            }
+        }
+
+        System.out.println("Jumlah semua angka: " + sum);
+        System.out.println("rata ratanya adalah: " + avg);
+        System.out.println("nilai max: " + nmax);
+        System.out.println("nilai min: " + nmin);
+        System.out.println("Terdapat angka ganjil sebanyak: " + ganjil + ", dan genap: " + genap);
+        
+
+        // mencari apakah ada nilai di array
+        boolean ketemu = true;
+        
+        int cari;
+        while (ketemu) {
+            System.out.print("Mau mencari angka di array (ya/tidak)?: ");
+            String jawab = in.next();
+            if (jawab.equalsIgnoreCase("tidak")) {
+                ketemu = false;
+            } else if (jawab.equalsIgnoreCase("ya")) {
+                System.out.print("Masukkan angka tersebut: ");
+                cari = in.nextInt();
+                for (int i = 0; i < jumlahArray; i++) {
+                    if (arr[i] == cari) {
+                        System.out.println("angka ditemukan!");
+                        break;
+                    } else {
+                        System.out.println("angka tidak ditemukan");
+                    }
+                }
+            }
+        }
+    }
+}
