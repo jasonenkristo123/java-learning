@@ -199,3 +199,19 @@ class setres2 {
         System.out.println("Jumlah dari semua array: " + sum);
     }
 }
+
+class setres3 {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        penjumlahan(in);
+    }
+
+    public static void penjumlahan(Scanner in) {
+        System.out.print("Masukkan angka pertama: ");
+        int angka1 = in.nextInt();
+        System.out.print("Masukkan angka kedua: ");
+        int angka2 = in.nextInt();
+
+        System.out.println("Hasil penjumlahan = " + (angka1 + angka2));
+    }
+}
