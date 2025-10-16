@@ -215,3 +215,38 @@ class setres3 {
         System.out.println("Hasil penjumlahan = " + (angka1 + angka2));
     }
 }
+
+class setres4 {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        bil(in);
+    }
+    public static void bil(Scanner in) {
+        System.out.print("Masukkan bilangan: ");
+        int bilangan = in.nextInt();
+        if (bilangan % 2 == 0) {
+            System.out.println("Bilangan " + bilangan + " adalah genap");
+        } else {
+            System.out.println("Bilangan " + bilangan + " adalah ganjil");
+        }
+    }
+}
+
+class setres5 {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Masukkan bilangan: ");
+        int bilangan = in.nextInt();
+
+        boolean hasil = isGenap(bilangan);
+
+        if (hasil) {
+            System.out.println("Bilangan " + bilangan + " tersebut adalah genap");
+        } else {
+            System.out.println("Bilangan " + bilangan + " tersebut adalah ganjil");
+        }
+    }
+    public static boolean isGenap(int angka) {
+        return angka % 2 == 0;
+    }
+}
