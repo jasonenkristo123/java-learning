@@ -57,13 +57,13 @@ public class liveCodingBABI {
         if (ipk > ipkmax) {
             ipkmax = ipk;
         }
-        System.out.printf("%-16s: %.2f\n", "IPK Tertinggi: ", ipkmax);
+        System.out.printf("%-16s: %.2f\n", "IPK Tertinggi", ipkmax);
     }
     static void ipkMin() {
         if (ipk < ipkmin) {
             ipkmin = ipk;
         }
-        System.out.printf("%-16s: %.2f\n", "IPK Terendah: ", ipkmin);
+        System.out.printf("%-16s: %.2f\n", "IPK Terendah", ipkmin);
     }
     static void Status() {
         if (rata > 2.75) {
@@ -72,5 +72,37 @@ public class liveCodingBABI {
             status = "TIDAK LULUS";
         }
         System.out.println("Status: " + status);
+    }
+}
+
+class soal2 {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        String kalimat = in.nextLine();
+
+        String hasilTeks = ubahFormat(kalimat);
+        int jumlahVokal = hitungVokal(kalimat);
+
+        tampilHasil(hasilTeks, jumlahVokal);
+    }
+    static String ubahFormat(String teks) {
+        teks = teks.toUpperCase();
+        teks = teks.replace(" ", "-");
+        return teks;
+    }
+    static int hitungVokal(String teks) {
+        teks = teks.toUpperCase();
+        int jumlah = 0;
+        for (int i = 0; i < teks.length(); i++) {
+            char vokal = teks.charAt(i);
+            if (vokal == 'A' || vokal == 'I' || vokal == 'U' || vokal == 'E' || vokal == 'O') {
+                jumlah++;
+            }
+        }
+        return jumlah;
+    }
+    static void tampilHasil(String hasil, int vokal) {
+        System.out.println("Kalimat hasil format: " + hasil);
+        System.out.println("Jumlah huruf vokal: " + vokal);
     }
 }

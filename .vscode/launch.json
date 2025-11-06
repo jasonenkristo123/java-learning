@@ -3,6 +3,13 @@
   "configurations": [
     {
         "type": "java",
+        "name": "soal2",
+        "request": "launch",
+        "mainClass": "Playground.soal2",
+        "projectName": "java-learning_94fed51a"
+    },
+    {
+        "type": "java",
         "name": "liveCodingBABI",
         "request": "launch",
         "mainClass": "Playground.liveCodingBABI",
