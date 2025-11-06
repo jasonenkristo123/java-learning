@@ -3,6 +3,13 @@
   "configurations": [
     {
         "type": "java",
+        "name": "liveCodingBABI",
+        "request": "launch",
+        "mainClass": "Playground.liveCodingBABI",
+        "projectName": "java-learning_94fed51a"
+    },
+    {
+        "type": "java",
         "name": "testing",
         "request": "launch",
         "mainClass": "Playground.testing",
