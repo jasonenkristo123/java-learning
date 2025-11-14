@@ -264,3 +264,22 @@ private static int faktorial(int bil){ if (bil==1)
 return 1; 
 else return (bil * faktorial(bil-1)); } 
 } 
+
+
+class pemdasLiang {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int number1 = (int)(Math.random() * 10);
+        int number2 = (int)(Math.random() * 10);
+        int number3 = (int)(Math.random() * 10);
+        int hasil = number1 + number2 + number3;
+
+        System.out.print("What is " + number1 + " + " + number2 + " + " + number3 + "? ");
+        int answer = in.nextInt();
+        if (answer == hasil) {
+            System.out.println(number1 + " + " + number2 + " + " + number3 + " = " + answer + " is true");
+        } else {
+            System.out.println(number1 + " + " + number2 + " + " + number3 + " = " + answer + " is false");
+        }
+    }
+}

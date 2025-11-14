@@ -3,6 +3,13 @@
   "configurations": [
     {
         "type": "java",
+        "name": "pemdasLiang",
+        "request": "launch",
+        "mainClass": "Playground.pemdasLiang",
+        "projectName": "java-learning_94fed51a"
+    },
+    {
+        "type": "java",
         "name": "soal2",
         "request": "launch",
         "mainClass": "Playground.soal2",
